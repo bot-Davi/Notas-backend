@@ -1,0 +1,24 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de registro
+logs/
+*.log
+
+# Archivos temporales
+*.tmp
+
+# Archivos de configuración
+.env
+
+# Archivos generados por IDEs y editores de código
+.vscode/
+.idea/
+
+# Archivos generados por npm
+package-lock.json
+npm-debug.log
+
+# Archivos de caché
+.cache/
+dist/
