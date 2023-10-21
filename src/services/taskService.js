@@ -1,8 +1,8 @@
 const TaskModel = require("../models/task");
 
-const getTask = async (data) => {
+const getTask = async (id) => {
   try {
-    const taskData = await TaskModel.find({author:data.id}).populate({
+    const taskData = await TaskModel.find({author:id}).populate({
       path: "author",
       select: "name email",
     });

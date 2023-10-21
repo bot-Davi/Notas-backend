@@ -45,6 +45,4 @@ const registerUser = async (data) => {
   }
 };
 
-
 module.exports = { registerUser, loginUser };
-

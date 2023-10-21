@@ -5,7 +5,7 @@ const { authMiddleware } = require("../middleware");
 
 router.get("/", authMiddleware, async (req, res) => {
   try {
-    const data = await getTask(req.user);
+    const data = await getTask(req.user.id);
     res.json({ data });
   } catch (error) {
     res.status(500).json({ error: error.message });
