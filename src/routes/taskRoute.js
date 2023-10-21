@@ -3,9 +3,9 @@ const router = express.Router();
 const { getTask, createTask } = require("../services/taskService");
 const { authMiddleware } = require("../middleware");
 
-router.get("/", authMiddleware, async (_, res) => {
+router.get("/", authMiddleware, async (req, res) => {
   try {
-    const data = await getTask();
+    const data = await getTask(req.user);
     res.json({ data });
   } catch (error) {
     res.status(500).json({ error: error.message });
